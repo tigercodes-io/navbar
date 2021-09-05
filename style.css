@@ -4,7 +4,7 @@
 }
 
 a {
-  color: #fff;
+  color: rgb(8, 0, 0);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -19,19 +19,18 @@ a:hover {
   letter-spacing: 4px;
 }
 
+.line{
+  background-color: #499A71;
+  height: 1vh;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
-  height: 8vh;
-}
-
-main {
-  background: url("bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 92vh;
+  font-family: system-ui,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #FFF;
+  height: 9vh;
 }
 
 .nav-list {
@@ -51,40 +50,50 @@ main {
 
 .mobile-menu div {
   width: 32px;
-  height: 2px;
-  background: #fff;
+  height: 3px;
+  background: black;
   margin: 8px;
   transition: 0.3s;
 }
 
-@media (max-width: 999px) {
+@media screen and (max-width:900px)  {
+  .nav-list {
+    list-style: none;
+    display: none;
+}
+
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
+
   .nav-list {
     position: absolute;
-    top: 8vh;
+    top: 10vh;
     right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #23232e;
+    width:100vw;
+    height: 90vh;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
+
   .nav-list li {
-    margin-left: 0;
-    opacity: 0;
+    margin-left: 9px;
+    margin-top: 20px;
+    border-bottom: 2px solid #499A71;
+    opacity: 0;    
   }
+
   .mobile-menu {
     display: block;
   }
 }
 
 .nav-list.active {
-  transform: translateX(0);
+    display: flex;
+    transform: translateX(0);
 }
 
 @keyframes navLinkFade {
@@ -98,14 +107,15 @@ main {
   }
 }
 
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
+.mobile-menu.active .line1{
+  transform: rotate(-45deg) translate(-9px, 9px);
 }
 
-.mobile-menu.active .line2 {
+.mobile-menu.active .line2{
   opacity: 0;
 }
 
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
+
+.mobile-menu.active .line3{
+  transform: rotate(45deg) translate(-6px, -7px);
 }
