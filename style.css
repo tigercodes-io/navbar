@@ -73,17 +73,18 @@ nav {
     width:100vw;
     height: 90vh;
     z-index: 1000;
-    background: rgb(255, 255, 255);
+    background: white;
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
 
   .nav-list li {
-    margin-left: 9px;
-    margin-top: 20px;
+    margin-left: 10%;
+    margin-top: 10%;
     border-bottom: 2px solid #499A71;
-    opacity: 0;    
+    opacity: 0; 
+    font-size: x-large;   
   }
 
   .mobile-menu {
@@ -108,7 +109,7 @@ nav {
 }
 
 .mobile-menu.active .line1{
-  transform: rotate(-45deg) translate(-9px, 9px);
+  transform: rotate(-45deg) translate(-7px, 10px);
 }
 
 .mobile-menu.active .line2{
@@ -117,5 +118,5 @@ nav {
 
 
 .mobile-menu.active .line3{
-  transform: rotate(45deg) translate(-6px, -7px);
+  transform: rotate(45deg) translate(-5px, -8px);
 }
