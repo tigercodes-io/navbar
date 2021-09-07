@@ -58,9 +58,14 @@ main {
 }
 
 @media (max-width: 999px) {
+  .nav-list {
+    display: none;
+  }             
+
   body {
     overflow-x: hidden;
   }
+
   .nav-list {
     position: absolute;
     top: 8vh;
@@ -84,6 +89,7 @@ main {
 }
 
 .nav-list.active {
+  display: flex;   
   transform: translateX(0);
 }
 
